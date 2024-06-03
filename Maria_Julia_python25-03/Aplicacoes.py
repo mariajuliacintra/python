@@ -38,4 +38,43 @@ if achado:
 else:
     print("Elemento não encontrado!!!")
 
-time.sleep(3)
+#Exemplo 4 - Conferidor de aposta na loteria
+sorteados = [5, 11, 9, 42, 3, 49]
+apostados = [3, 7, 11, 42, 34, 49]
+acertos = 0
+
+for numero in sorteados:
+    if numero in apostados:
+        acertos += 1 
+print("Numeros de acertos:", acertos)
+
+#Remoção de numeros repetidos em uma lista 
+lista = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
+print("lista original:", lista)
+#Lista de apoio
+vistos = []
+#Iterar pela lista original de trás para frente
+for i in range(len(lista)-1,-1,-1):
+    #Se o numero já esta na lista "vistos" removelo da lista original
+    if lista[i] in vistos:
+        del lista[i]
+    else:
+        #Caso contrario adiciona a lista "vistos"
+        vistos.append(lista[i])
+print("Lista modificada:", lista)
+
+
+#Listas Avançadas
+#2 D - listas aninhadas bidimensionais
+tabela=[[":(", ":)", ":|", ";-;"], [";-;", ":|", ":)", ":("], [":|", ":)", ";-;", ":("]]
+print(tabela[0][3])
+
+#3D - Matriz Tridimensional
+cubo = [[[":(", "y", "z"], [":)", "y", "z"], [":|", "y", "z"]],
+        [["amor", "ódio", "caridade"], ["paz", "esperança", "férias"], ["tina", "prior", "pp"]],
+        [["restinga", "patrocinio", "rifaina"], ["amazonense", "fluminense", "santos"], ["pizza", "lasanha", "pastel"]]]
+print(cubo)
+print(cubo[1])
+print(cubo[1][0])
+print(cubo[1][0][2])
+time.sleep(3) 
